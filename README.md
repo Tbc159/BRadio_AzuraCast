@@ -52,7 +52,7 @@ sudo chown user:user /var/azuracast
 cd /var/azuracast
 
 
-curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
+curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/docker.sh > docker.sh
 chmod a+x docker.sh
 ./docker.sh install-docker
 ./docker.sh install-docker-compose
