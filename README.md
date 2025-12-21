@@ -56,6 +56,11 @@ curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/docker
 chmod a+x docker.sh
 ./docker.sh install-docker
 ./docker.sh install-docker-compose
+sudo usermod -aG docker $USER
+exit
+```
+```
+cd /var/azuracast
 yes '' | ./docker.sh install
 
 ```
