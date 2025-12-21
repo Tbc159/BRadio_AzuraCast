@@ -31,7 +31,7 @@ Want to see AzuraCast for yourself? Visit our demo site at [demo.azuracast.com](
 * Username: `demo@azuracast.com`
 * Password: `demo`
 
-## Install AzuraCast in ProxmoxVM
+## Install AzuraCast
 
 To install AzuraCast, you should have a basic understanding of the Linux shell terminal. Once installed, every aspect of
 your radio station can be managed via AzuraCast's web interface.
@@ -39,27 +39,6 @@ your radio station can be managed via AzuraCast's web interface.
 Follow our **[installation guide](https://www.azuracast.com/docs/getting-started/installation/)** for instructions on
 how
 to install AzuraCast on your own server.
-
-* To use ProxmoxVM you have to create a new one.
-
-### Install with Docker
-
-Execute follow commands
-
-```
-sudo mkdir -p /var/azuracast
-sudo chown user:user /var/azuracast
-cd /var/azuracast
-
-
-curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
-chmod a+x docker.sh
-./docker.sh install-docker
-./docker.sh install-docker-compose
-yes '' | ./docker.sh install
-
-```
-
 
 ## License
 
