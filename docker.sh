@@ -493,13 +493,13 @@ install() {
   run-installer "$@"
 
   # Installer creates a file at docker-compose.new.yml; copy it to the main spot.
-  if [[ -s docker-compose.new.yml ]]; then
-    if [[ -f docker-compose.yml ]]; then
-      rm docker-compose.yml
-    fi
+  #f [[ -s docker-compose.new.yml ]]; then
+  # if [[ -f docker-compose.yml ]]; then
+  #   rm docker-compose.yml
+  # fi
 
-    mv docker-compose.new.yml docker-compose.yml
-  fi
+  # mv docker-compose.new.yml docker-compose.yml
+  #i
 
   # If this script is running as a non-root user, set the PUID/PGID in the environment vars appropriately.
   if [[ $EUID -ne 0 ]]; then
