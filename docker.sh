@@ -417,7 +417,7 @@ install-docker-compose() {
   fi
 }
 
-run-installer_old() {
+run-installer() {
   local AZURACAST_RELEASE_BRANCH
   AZURACAST_RELEASE_BRANCH=$(get-release-branch-name)
 
