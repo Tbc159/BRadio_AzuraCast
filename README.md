@@ -48,14 +48,13 @@ Execute follow commands
 
 ```
 sudo mkdir -p /var/azuracast
-sudo mkdir -p /opt/bradio
-#sudo mkdir -p /opt/bradio/{stations,backups,db,uploads,shoutcast2,stereo_tool,rsas,geoip,sftpgo,acme}
+sudo mkdir -p /opt/bradio/{stations,backups,db,uploads,shoutcast2,stereo_tool,rsas,geoip,sftpgo,acme}
 sudo chown user:user /var/azuracast
-sudo chown user:user /opt/bradio
+sudo chown -R user:user /opt/bradio
 cd /var/azuracast
 
 
-curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/docker.sh > docker.sh
+curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/docker_old.sh > docker.sh
 curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/refs/heads/stable/docker-compose.sample.yml > docker-compose.yml
 chmod a+x docker.sh
 ./docker.sh install-docker
