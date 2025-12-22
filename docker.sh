@@ -228,6 +228,9 @@ setup-ports() {
 #
 setup-release() {
   if [[ ! -f .env ]]; then
+  pwd
+    ls -l
+    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/sample.env -o .env
   fi
 
@@ -419,12 +422,21 @@ run-installer() {
   AZURACAST_RELEASE_BRANCH=$(get-release-branch-name)
 
   if [[ ! -f .env ]]; then
+    pwd
+    ls -l
+    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/sample.env -o .env
   fi
   if [[ ! -f azuracast.env ]]; then
+  pwd
+    ls -l
+    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/azuracast.sample.env -o azuracast.env
   fi
   if [[ ! -f docker-compose.yml ]]; then
+  pwd
+    ls -l
+    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/docker-compose.sample.yml -o docker-compose.yml
   fi
 
@@ -537,15 +549,27 @@ install-dev() {
   fi
 
   if [[ ! -f docker-compose.yml ]]; then
+  pwd
+    ls -l
+    sleep 5
     cp docker-compose.sample.yml docker-compose.yml
   fi
   if [[ ! -f docker-compose.override.yml ]]; then
+  pwd
+    ls -l
+    sleep 5
     cp docker-compose.dev.yml docker-compose.override.yml
   fi
   if [[ ! -f .env ]]; then
+  pwd
+    ls -l
+    sleep 5
     cp dev.env .env
   fi
   if [[ ! -f azuracast.env ]]; then
+  pwd
+    ls -l
+    sleep 5
     cp azuracast.dev.env azuracast.env
 
     echo "Customize azuracast.env file now before continuing. Re-run this command to continue installation."
