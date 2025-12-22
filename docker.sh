@@ -417,26 +417,17 @@ install-docker-compose() {
   fi
 }
 
-run-installer() {
+run-installer_old() {
   local AZURACAST_RELEASE_BRANCH
   AZURACAST_RELEASE_BRANCH=$(get-release-branch-name)
 
   if [[ ! -f .env ]]; then
-    pwd
-    ls -l
-    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/sample.env -o .env
   fi
   if [[ ! -f azuracast.env ]]; then
-  pwd
-    ls -l
-    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/azuracast.sample.env -o azuracast.env
   fi
   if [[ ! -f docker-compose.yml ]]; then
-  pwd
-    ls -l
-    sleep 5
     curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/$AZURACAST_RELEASE_BRANCH/docker-compose.sample.yml -o docker-compose.yml
   fi
 
@@ -504,9 +495,6 @@ install() {
   # Installer creates a file at docker-compose.new.yml; copy it to the main spot.
   if [[ -s docker-compose.new.yml ]]; then
     if [[ -f docker-compose.yml ]]; then
-    pwd
-    ls -l
-    sleep 5
       rm docker-compose.yml
     fi
 
