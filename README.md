@@ -53,6 +53,7 @@ cd /var/azuracast
 
 
 curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/main/docker.sh > docker.sh
+curl -fsSL https://raw.githubusercontent.com/Tbc159/BRadio_AzuraCast/blob/stable/docker-compose.sample.yml  > docker-compose.yml
 chmod a+x docker.sh
 ./docker.sh install-docker
 ./docker.sh install-docker-compose

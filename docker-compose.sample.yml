@@ -25,6 +25,9 @@ services:
       - '${AZURACAST_HTTPS_PORT:-443}:${AZURACAST_HTTPS_PORT:-443}'
       - '${AZURACAST_SFTP_PORT:-2022}:${AZURACAST_SFTP_PORT:-2022}'
       - '8000:8000'
+      - '8005:8005'
+      - '8006:8006'
+      - '8010:8010'
     env_file:
       - azuracast.env
       - .env
