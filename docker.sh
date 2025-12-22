@@ -504,6 +504,9 @@ install() {
   # Installer creates a file at docker-compose.new.yml; copy it to the main spot.
   if [[ -s docker-compose.new.yml ]]; then
     if [[ -f docker-compose.yml ]]; then
+    pwd
+    ls -l
+    sleep 5
       rm docker-compose.yml
     fi
 

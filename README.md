@@ -62,7 +62,7 @@ exit
 ```
 ```
 cd /var/azuracast
-yes '' | ./docker.sh install
+yes '' | bash -x ./docker.sh install
 
 ```
 
